@@ -16,7 +16,7 @@ function App() {
       <Route path="/admindashboard" Component={AdminDashboard} />
       <Route path="/admindashboard/departments" Component={DepartmentsView} />
       <Route path="/admindashboard/employee" Component={EmployeeView} />
-      <Route path="/admindashboard/employee/editemployee" Component={EmployeeView} />
+      <Route path="/admindashboard/employee/editemployee" Component={EditEmployee} />
     </Routes>
   )
 }
