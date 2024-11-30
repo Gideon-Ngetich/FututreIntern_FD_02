@@ -3,17 +3,17 @@ const { pool } = require('../db')
 
 router.get('/', async (req, res) => {
     try {
-        const query = `SELECT * FROM employee`
+        const query = `SELECT * FROM departments `
 
         pool.query(query, (err, results) => {
             if (err) {
-                res.status(400).json({ message: 'Error fetching employees', })
+                res.status(400).json({ message: 'Error fetching departments', })
                 console.error(err)
             } else if(results.length === 0) {
-                res.status(404).json({message: 'No employees found'})
+                res.status(404).json({message: 'No departments found'})
             }
 
-            res.status(200).json({ message: 'Fetch successfull', results})
+            res.status(200).json({ message: 'Fetch successfully', results})
 
         })
 

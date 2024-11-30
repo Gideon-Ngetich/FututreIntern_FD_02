@@ -4,10 +4,8 @@ const { pool } = require('../db')
 router.get('/', async (req, res) => {
     try {
         const employeeID  = req.query
-        console.log(employeeID)
 
         const query = `SELECT * FROM employee WHERE employeeID = ?`
-        console.log(query)
 
         pool.query(query, [employeeID.employeeID],(err, results) => {
             if (err) {
@@ -15,10 +13,11 @@ router.get('/', async (req, res) => {
                 console.error(err)
                 return
             } 
-
+            if(results.length === 0){
+                res.status(404).json('Employee not found')
+                return;
+            }
             res.status(200).json(results)
-            console.log(results)
-
         })
     } catch (error) {
         res.status(500).json({message: 'Internal server error'})

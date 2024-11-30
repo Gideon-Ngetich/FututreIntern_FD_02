@@ -8,6 +8,11 @@ const department = require('./Routes/departments')
 const getEmployess = require('./Routes/getDepartments')
 const getEmployeeById = require('./Routes/getEmployeeById')
 const updateEmployee = require('./Routes//employeeUpdate')
+const deleteEmployee = require('./Routes/deleteEmployee')
+const updateDepartment = require('./Routes/updateDepartment')
+const getDepartments = require('./Routes/getDepartments')
+const getDepartmentById = require('./Routes/getDepartmentById')
+const deleteDepartment = require('./Routes/deleteDepartment')
 
 const PORT = process.env.PORT
 
@@ -40,6 +45,11 @@ app.use('/api/department', department)
 app.use('/api/getemployees', getEmployess)
 app.use('/api/employees', getEmployeeById)
 app.use('/api/updateEmployee', updateEmployee)
+app.use('/api/deleteemployee', deleteEmployee)
+app.use('/api/updatedepartment', updateDepartment)
+app.use('/api/getdepartments', getDepartments)
+app.use('/api/getdepartmentbyid', getDepartmentById)
+app.use('/api/deletedepartment', deleteDepartment)
 
 app.get('/', (req, res) => {
     res.json('EMS')
