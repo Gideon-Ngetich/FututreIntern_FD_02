@@ -13,10 +13,10 @@ router.get('/', async (req, res) => {
                 console.error(err)
                 return
             } 
-            if(results.length === 0){
-                res.status(404).json('Employee not found')
-                return;
-            }
+            // if(results.length === 0){
+            //     res.status(404).json('Employee not found')
+            //     return;
+            // }
             res.status(200).json(results)
         })
     } catch (error) {

@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
                 res.status(404).json({message: 'No departments found'})
             }
 
-            res.status(200).json({ message: 'Fetch successfully', results})
+            res.status(200).json(results)
 
         })
 
