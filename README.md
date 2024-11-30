@@ -47,3 +47,39 @@ The **Employee Management System** is a web-based application designed for manag
    ```bash
    git clone https://github.com/your-username/employee-management-system.git
    cd employee-management-system
+
+2. **Install dependencies:**
+    ``` bash
+    cd server
+    npm install
+    cd ../client
+    npm install
+
+3. **Configure the environment variables:**
+    ```bash
+    DB_HOST=your_database_host
+    DB_PORT=3306
+    DB_USER=your_database_user
+    DB_PASSWORD=your_database_password
+    DB_NAME=employee_management_db
+
+4. **Start the application:**
+    - Start the backend server:
+    ```bash
+    cd server
+    npm start
+
+    ---
+    - Start the frontend development server:
+    ```bash
+    cd client
+    npm start
+
+5. **Access the application:**
+    - Open your browser and go to http://localhost:5173.
+
+
+
+
+
+
